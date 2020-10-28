@@ -1,0 +1,11 @@
+@import 'setup';
+@import 'global';
+@import 'typography';
+@import 'header';
+
+
+.wrapper {
+    max-width: 1280px;
+    width: 85%;
+    margin: 0 auto;
+}

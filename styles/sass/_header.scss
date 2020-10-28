@@ -1,0 +1,39 @@
+// HEADER
+
+header {
+    min-height: 60vh;
+    background-image: url(./Assets/homeHeader.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.nav--top__ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 0;
+    padding-top: 30px;
+}
+
+.nav--top__li {
+    padding: 15px 30px 15px 0;
+}
+
+.nav--top__li a:hover, .nav--top__li a:hover {
+    border-bottom: 2px solid $accent;
+    padding: 5px;
+}
+
+.title {
+    max-width: 40vw;
+    display: flex;
+    flex-grow: 0;
+}
+
+.title__text span {
+    display: block;
+    padding-top: 8px;
+    
+}
