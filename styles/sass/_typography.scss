@@ -1,4 +1,6 @@
 // TYPE STYLES
+
+// these all seem bolder than the PSD, but are taken exactly from the style sheet
 h1, h2, h3, h4, h5, h6, button, a {
     font-family: 'Josefin Sans', sans-serif;
     text-transform: uppercase;
@@ -11,23 +13,26 @@ h1{
 }
 
 h1 span {
-    color: $secondary;
+    display: inline-block;
     background-color: $white;
+    color: $secondary;
+    height: 6.9rem;
+    background-position: center;
 }
 
-h2, h3 {
+h2, h3, h4 {
     font-weight: 400;
     font-size: 4.5rem;
     line-height: 99.8px;
     color: $white
 }
 
-h3 {
+h4 {
     text-align: center;
     color: $accent;
 }
 
-h4 {
+h5 {
     font-weight: 400;
     font-size: 4rem;
     line-height: 58px;
@@ -35,7 +40,7 @@ h4 {
     color: $white;
 }
 
-h5 {
+h6 {
     font-weight: 400;
     font-size: 2.5rem;
     line-height: 58px;
@@ -61,7 +66,7 @@ a {
     color: $white;
 }
 
-p {
+p, footer a {
    font-family: 'Barlow', sans-serif;
    font-weight: 300;
    font-size: 2rem;

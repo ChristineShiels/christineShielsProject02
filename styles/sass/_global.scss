@@ -5,3 +5,51 @@ $secondary: #171B0E;
 $accent: #FFD300;
 $white: #FFFFFF;
 $black: #0F0F0F;
+
+// extra undo styling
+ul, h1, h2, h3, h4, h5, h6, p, section {
+    margin: 0;
+    padding: 0;
+}
+
+// spanx
+.wrapper {
+    max-width: 1900px;
+    width: 85%;
+    margin: 0 auto;
+}
+
+// button styles, hover, and focus states
+button {
+    background-color: $accent;
+    padding: 7px 15px 5px 15px;
+    border: none;
+    display: block;
+    border: 2px solid transparent;
+}
+
+.button--light:hover, .button--light:focus {
+    border-color: $accent;
+    background-color: $secondary;
+    color: $accent;
+}
+
+.button--light:active {
+    background-color: $white;
+    color: $secondary;
+}
+
+.button--dark {
+    background-color: $black;
+    color: $white;
+}
+
+.button--dark:hover, .button--dark:focus {
+    border-color: $black;
+    color: $black;
+    background-color: $white;
+}
+
+.button--dark:active {
+    background-color: $accent;
+}

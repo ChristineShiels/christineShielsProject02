@@ -7,6 +7,7 @@ header {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    position: relative;
 }
 
 .nav--top__ul {
@@ -21,19 +22,24 @@ header {
     padding: 15px 30px 15px 0;
 }
 
-.nav--top__li a:hover, .nav--top__li a:hover {
-    border-bottom: 2px solid $accent;
+.nav--top__li a {
+    border-bottom: 2px solid transparent;
     padding: 5px;
 }
 
+.nav--top__li a:hover, .nav--top__li a:hover {
+    border-bottom: 2px solid $accent;
+}
+
 .title {
-    max-width: 40vw;
+    max-width: 35vw;
     display: flex;
     flex-grow: 0;
 }
-
-.title__text span {
-    display: block;
-    padding-top: 8px;
-    
+.image--floater {
+    width: 50%;
+    position: absolute;
+    right: 0;
+    top: 30%;
+    max-height: 600px;
 }
