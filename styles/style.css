@@ -342,7 +342,6 @@ h5 {
 h6 {
   font-weight: 400;
   font-size: 2.5rem;
-  line-height: 58px;
   letter-spacing: 0.8px;
   color: #FFD300;
 }
@@ -368,7 +367,7 @@ a {
   color: #FFFFFF;
 }
 
-p, footer a {
+p, footer a, .blog__sideNav, input, textarea {
   font-family: 'Barlow', sans-serif;
   font-weight: 300;
   font-size: 2rem;
@@ -379,12 +378,19 @@ p, footer a {
 
 header {
   min-height: 60vh;
-  background-image: url(./Assets/homeHeader.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   position: relative;
+}
+
+header.main {
+  background-image: url(./Assets/homeHeader.jpg);
+}
+
+header.blog {
+  background-image: url(./Assets/blogHeader.jpg);
 }
 
 .nav--top__ul {
@@ -415,8 +421,8 @@ header {
   border-bottom: 2px solid #FFD300;
 }
 
-.title {
-  max-width: 35vw;
+.main .title {
+  max-width: 30vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -425,12 +431,25 @@ header {
           flex-grow: 0;
 }
 
-.image--floater {
+.blog .title {
+  margin-top: 5%;
+}
+
+.main .image--floater {
   width: 50%;
   position: absolute;
   right: 0;
   top: 30%;
   max-height: 600px;
+}
+
+.blog .image--floater {
+  width: calc(60vw - 20px);
+  position: absolute;
+  right: 0;
+  top: 60%;
+  -webkit-box-shadow: -20px 20px #FFD300;
+          box-shadow: -20px 20px #FFD300;
 }
 
 .about {
@@ -670,4 +689,158 @@ footer {
   background-color: #0F0F0F;
   text-align: center;
   padding: 1% 0;
+}
+
+.blogPage {
+  background-color: #2B331B;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30vw 60vw;
+      grid-template-columns: 30vw 60vw;
+  -ms-grid-rows: 35vw 100% 1fr;
+      grid-template-rows: 35vw 100% 1fr;
+  -webkit-column-gap: calc(10vw - 17px);
+          column-gap: calc(10vw - 17px);
+  min-height: 200vh;
+}
+
+.sidebar {
+  padding: 25% 0;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+}
+
+.sidebar img {
+  width: calc(100% - 20px);
+  -webkit-box-shadow: 20px 0 #171B0E;
+          box-shadow: 20px 0 #171B0E;
+}
+
+.sidebar__content {
+  margin-left: 60px;
+  padding: 0 10%;
+  background-color: #171B0E;
+}
+
+.sidebar__title {
+  padding-top: 10%;
+  margin-bottom: 5%;
+}
+
+.sidebar__content ul {
+  list-style-type: disc;
+  color: #FFFFFF;
+  font-size: 2rem;
+  padding-bottom: 10%;
+  margin-left: 20px;
+}
+
+.sidebar__content li {
+  padding-bottom: 5%;
+}
+
+.mainBlog {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+  position: relative;
+}
+
+.mainBlog .image--floater {
+  width: calc(60vw - 20px);
+  position: absolute;
+  right: 0;
+  top: -5vw;
+  -webkit-box-shadow: -20px 20px #FFD300;
+          box-shadow: -20px 20px #FFD300;
+}
+
+.mainBlog__content {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+  width: calc(60vw - 10px);
+  padding: 15% 15% 10% 15%;
+  border-left: 5px solid #FFD300;
+  border-bottom: 5px solid #FFD300;
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+}
+
+.mainBlog__title {
+  line-height: 50px;
+  margin-bottom: 5%;
+  text-align: left;
+}
+
+.mainBlog__subtitle {
+  font-weight: 600;
+  margin-bottom: 5%;
+}
+
+.mainBlog__text {
+  padding-bottom: 5%;
+}
+
+.comments {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3 / 4;
+  padding: 5%;
+}
+
+.commentContent img {
+  float: left;
+  margin-right: 5%;
+}
+
+.commentsContent {
+  float: left;
+  width: 75%;
+  margin-bottom: 5%;
+}
+
+.commentsContent h6 {
+  margin-bottom: 5%;
+}
+
+.commentForm input, .commentForm textarea {
+  background-color: #2B331B;
+  padding: 4%;
+  margin: 2%;
+  border: none;
+}
+
+.commentForm {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.commentForm input {
+  border-bottom: 2px solid #FFD300;
+  width: 42%;
+}
+
+.commentForm textarea {
+  resize: none;
+  width: 88%;
+  border: 2px solid #FFD300;
+  height: 20vw;
+}
+
+.commentForm button {
+  width: 88%;
+  margin: 2% 2% 2% 6%;
 }

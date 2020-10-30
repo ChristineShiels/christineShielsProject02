@@ -2,7 +2,6 @@
 
 header {
     min-height: 60vh;
-    background-image: url(./Assets/homeHeader.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -10,6 +9,13 @@ header {
     position: relative;
 }
 
+header.main{
+        background-image: url(./Assets/homeHeader.jpg);
+}
+
+header.blog {
+    background-image: url(./Assets/blogHeader.jpg);
+}
 .nav--top__ul {
     display: flex;
     flex-direction: row;
@@ -31,15 +37,28 @@ header {
     border-bottom: 2px solid $accent;
 }
 
-.title {
-    max-width: 35vw;
+.main .title {
+    max-width: 30vw;
     display: flex;
     flex-grow: 0;
 }
-.image--floater {
+
+.blog .title{
+    margin-top: 5%;
+}
+
+.main .image--floater {
     width: 50%;
     position: absolute;
     right: 0;
     top: 30%;
     max-height: 600px;
+}
+
+.blog .image--floater {
+    width: calc(60vw - 20px);
+    position: absolute;
+    right: 0;
+    top: 60%;
+    box-shadow: -20px 20px $accent;
 }

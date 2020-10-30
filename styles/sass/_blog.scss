@@ -1,0 +1,133 @@
+// BLOG CONTENT
+.blogPage {
+    background-color: $primary;
+    display: grid;
+    grid-template-columns: 30vw 60vw;
+    grid-template-rows: 35vw 100% 1fr;
+    column-gap: calc(10vw - 17px);
+    min-height: 200vh;
+}
+
+.sidebar {
+    padding: 25% 0;
+    grid-column: 1 / 2;
+}
+
+.sidebar img {
+    width: calc(100% - 20px);
+    box-shadow: 20px 0 $secondary;
+}
+
+.sidebar__content {
+    margin-left: 60px;
+    padding: 0 10%;
+    background-color: $secondary;
+    
+}
+
+.sidebar__title {
+    padding-top: 10%;
+    margin-bottom: 5%;
+}
+
+.sidebar__content ul {
+    list-style-type: disc;
+    color: $white;
+    font-size: 2rem;
+    padding-bottom: 10%;
+    margin-left: 20px;
+}
+
+.sidebar__content li {
+    padding-bottom: 5%;
+}
+
+.mainBlog{
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    position: relative;
+}
+
+.mainBlog .image--floater {
+    width: calc(60vw - 20px);
+    position: absolute;
+    right: 0;
+    top: -5vw;
+    box-shadow: -20px 20px $accent;
+}
+
+.mainBlog__content {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    width: calc(60vw - 10px);
+    padding: 15% 15% 10% 15%;
+    border-left: 5px solid $accent;
+    border-bottom: 5px solid $accent;
+    // remove pesky space from "row line"
+    transform: translateY(-2px);
+}
+
+.mainBlog__title {
+    line-height: 50px;
+    margin-bottom: 5%;
+    text-align: left;
+}
+
+.mainBlog__subtitle {
+    font-weight: 600;
+    margin-bottom: 5%;
+}
+
+.mainBlog__text {
+    padding-bottom: 5%;
+}
+
+.comments {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    padding: 5%;
+}
+
+.commentContent img{
+    float: left;
+    margin-right: 5%;
+}
+
+.commentsContent {
+    float: left;
+    width: 75%;
+    margin-bottom: 5%;
+}
+.commentsContent h6 {
+    margin-bottom: 5%;
+}
+
+.commentForm input, .commentForm textarea {
+    background-color: $primary;
+    padding: 4%;
+    margin: 2%;
+    border: none;
+}
+
+.commentForm {
+    text-align: center;
+    display: flex;
+}
+
+.commentForm input {
+    border-bottom: 2px solid $accent;
+    width: 42%;
+
+}
+
+.commentForm textarea {
+    resize: none;
+    width: 88%;
+    border: 2px solid $accent;
+    height: 20vw;
+}
+
+.commentForm button {
+    width: 88%;
+    margin: 2% 2% 2% 6%;
+}
