@@ -393,6 +393,10 @@ header.blog {
   background-image: url(./Assets/blogHeader.jpg);
 }
 
+header.contact {
+  background-image: url(./Assets/contactHeader.jpg);
+}
+
 .nav--top__ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -431,7 +435,7 @@ header.blog {
           flex-grow: 0;
 }
 
-.blog .title {
+.blog .title, .contact .title {
   margin-top: 5%;
 }
 
@@ -701,7 +705,6 @@ footer {
       grid-template-rows: 35vw 100% 1fr;
   -webkit-column-gap: calc(10vw - 17px);
           column-gap: calc(10vw - 17px);
-  min-height: 200vh;
 }
 
 .sidebar {
@@ -814,18 +817,18 @@ footer {
   margin-bottom: 5%;
 }
 
-.commentForm input, .commentForm textarea {
-  background-color: #2B331B;
-  padding: 4%;
-  margin: 2%;
-  border: none;
-}
-
 .commentForm {
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.commentForm input, .commentForm textarea {
+  background-color: #2B331B;
+  padding: 4%;
+  margin: 2%;
+  border: none;
 }
 
 .commentForm input {
@@ -841,6 +844,73 @@ footer {
 }
 
 .commentForm button {
+  width: 88%;
+  margin: 2% 2% 2% 6%;
+}
+
+.contact {
+  background-color: #2B331B;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30vw 60vw;
+      grid-template-columns: 30vw 60vw;
+  -webkit-column-gap: calc(10vw - 17px);
+          column-gap: calc(10vw - 17px);
+  min-height: 50vh;
+}
+
+.contactSidebar {
+  padding: 35% 0 0 35%;
+}
+
+.contact i {
+  font-size: 3rem;
+  color: #FFD300;
+  padding: 0 10% 10% 0;
+}
+
+.contactSidebar__email {
+  padding-bottom: 10%;
+}
+
+.contactSidebar__address {
+  padding-bottom: 5%;
+}
+
+.contactForm {
+  background-color: #171B0E;
+  -webkit-box-shadow: 20px 20px #FFD300;
+          box-shadow: 20px 20px #FFD300;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transform: translateY(-35%);
+          transform: translateY(-35%);
+  padding: 5%;
+  width: 90%;
+}
+
+.contactForm input, .contactForm textarea {
+  background-color: #171B0E;
+  padding: 4%;
+  margin: 2%;
+  border: none;
+}
+
+.contactForm input {
+  border-bottom: 2px solid #FFD300;
+  width: 42%;
+}
+
+.contactForm textarea {
+  resize: none;
+  width: 88%;
+  border: 2px solid #FFD300;
+  height: 20vw;
+}
+
+.contactForm button {
   width: 88%;
   margin: 2% 2% 2% 6%;
 }

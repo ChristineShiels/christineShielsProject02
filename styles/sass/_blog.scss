@@ -5,7 +5,6 @@
     grid-template-columns: 30vw 60vw;
     grid-template-rows: 35vw 100% 1fr;
     column-gap: calc(10vw - 17px);
-    min-height: 200vh;
 }
 
 .sidebar {
@@ -102,16 +101,16 @@
     margin-bottom: 5%;
 }
 
+.commentForm {
+    text-align: center;
+    display: flex;
+}
+
 .commentForm input, .commentForm textarea {
     background-color: $primary;
     padding: 4%;
     margin: 2%;
     border: none;
-}
-
-.commentForm {
-    text-align: center;
-    display: flex;
 }
 
 .commentForm input {

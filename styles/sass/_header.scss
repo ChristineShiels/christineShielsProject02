@@ -16,6 +16,11 @@ header.main{
 header.blog {
     background-image: url(./Assets/blogHeader.jpg);
 }
+
+header.contact {
+    background-image: url(./Assets/contactHeader.jpg);
+}
+
 .nav--top__ul {
     display: flex;
     flex-direction: row;
@@ -43,7 +48,7 @@ header.blog {
     flex-grow: 0;
 }
 
-.blog .title{
+.blog .title, .contact .title{
     margin-top: 5%;
 }
 

@@ -1,0 +1,62 @@
+.contact {
+    background-color: $primary;
+    display: grid;
+    grid-template-columns: 30vw 60vw;
+    column-gap: calc(10vw - 17px);
+    min-height: 50vh;
+}
+
+.contactSidebar {
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    padding: 35% 0 0 35%;
+}
+
+.contact i {
+    font-size: 3rem;
+    color: $accent;
+    padding: 0 10% 10% 0;
+}
+
+.contactSidebar__email {
+    padding-bottom: 10%;
+}
+
+.contactSidebar__address {
+    padding-bottom: 5%;
+}
+
+.contactForm {
+    background-color: $secondary;
+    box-shadow: 20px 20px $accent;
+    text-align: center;
+    display: flex;
+    transform: translateY(-35%);
+    padding: 5%;
+    width: 90%;
+}
+
+.contactForm input, .contactForm textarea {
+    background-color: $secondary;
+    padding: 4%;
+    margin: 2%;
+    border: none;
+}
+
+.contactForm input {
+    border-bottom: 2px solid $accent;
+    width: 42%;
+}
+
+.contactForm textarea {
+    resize: none;
+    width: 88%;
+    border: 2px solid $accent;
+    height: 20vw;
+}
+
+.contactForm button {
+    width: 88%;
+    margin: 2% 2% 2% 6%;
+}
