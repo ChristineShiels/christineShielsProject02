@@ -19,12 +19,11 @@
     padding: 0 10% 10% 0;
 }
 
-.contactSidebar__email {
-    padding-bottom: 10%;
-}
-
 .contactSidebar__address {
     padding-bottom: 5%;
+}
+.contactSidebar__info p:first-of-type {
+    padding-top: 10%;
 }
 
 .contactForm {

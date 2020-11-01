@@ -1,6 +1,7 @@
 // TYPE STYLES
 
-// these all seem bolder than the PSD, but are taken exactly from the style sheet
+// these all seem bolder than the PSD, but font weights are taken exactly from the style sheet
+// Line heigh was ridiculously largr in a few cases, so I lowered it from the style sheet to allow wrapping of text without looking weird, but added bottom margin to keep space between next section
 h1, h2, h3, h4, h5, h6, button, a {
     font-family: 'Josefin Sans', sans-serif;
     text-transform: uppercase;
@@ -23,7 +24,6 @@ h1 span {
 h2, h3, h4 {
     font-weight: 400;
     font-size: 4.5rem;
-    line-height: 99.8px;
     color: $white
 }
 
@@ -66,7 +66,7 @@ a {
     color: $white;
 }
 
-p, footer a, .blog__sideNav, input, textarea {
+p, footer a, .blog__sideNav, input, textarea, a.contactSidebar__email {
    font-family: 'Barlow', sans-serif;
    font-weight: 300;
    font-size: 2rem;

@@ -1,4 +1,5 @@
 // main section styles
+
 // ABOUT
 .about {
     background-color: $primary;
@@ -16,6 +17,7 @@
 
 .aboutCard {
     width: 40vw;
+    margin-bottom: 5%;
 }
 
 // prepended icons
@@ -23,15 +25,14 @@
     color:$primary;
     background-color: $accent;
     background-position: center;
-    margin: 20px;
+    margin-right: 20px;
     font-weight: 900;
     height: 60px;
     width: 60px;
     border-radius: 50%;
-    position: relative;
 }
 
-// sizing and centering
+// sizing and centering icons
 .fa-map-marker-alt {
     font-size: 3.5rem;
     padding: 12.5px 17px;
@@ -52,15 +53,15 @@
     padding: 15px 15px;	
 }
 
-// indenting
+// indenting text
 .aboutCard__text {
     padding-left: 100px;
+    margin: 1% 0;
 }
 
 // BLOG
 .blog {
-    background-color: $secondary;
-    min-height: 60vh;
+    background-color: $secondary; 
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -68,8 +69,11 @@
 }
 
 .blogCard {
-    max-width: 50%;
-    // position: relative;
+    width: 50%;
+}
+
+.blogCard img {
+    width: calc(100% - 20px);
 }
 
 // move green mush to right side
@@ -78,60 +82,53 @@ order: 4;
 }
 
 // float images out of section add box shadows
-.blogCard img {
-    width: 80%;
-    position: relative;
-}
 
 .blogCard__image--burger {
-    top: -15%;
-    left: 0;
     box-shadow: 20px 20px $accent;
+    transform: translateY(-7.5vh);
+}
+
+.blogCard02 {
+    display: flex;
+    justify-content: flex-end;
 }
 
 .blogCard__image--green {
-    bottom: -25%;
-    right: -20%;
+    // bottom: -40%;
+    // right: -20%;
     box-shadow: -20px 20px $accent;
-
+    transform: translateY(7.5vh);
 }
 
 // Blog Section text
-.blogCard__title--burger {
-    margin-top: 10%;  
-}
-
-.blogCard__title--green {
-    margin-top: 10%;  
+.blog p {
+    margin-top: 5%;
 }
 
 .blogCard__text--burger {
-    width: calc(43% - 20px)
+    padding: 5% 7.5% 5% 5%;  
 }
 
 .blogCard__text--green {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    min-height: 45vh;
     text-align: right;
-    width: calc(40% + 20px);
-    padding-bottom: 5%;
+    padding: 5% 5% 5% 7.5%;
 }
 
 .blogCard__content--burger {
-    padding: 0 15% 5% 0;
+    padding-bottom: 5%;
 }
 
-
 .blogCard__content--green {
-    padding: 0 0 5% 15%;
+    padding-bottom: 5%;
 }
 
 // Promo section
 .promo{
     background-color: $primary;
-    height: 60vh;
+    padding: 7.5vh 0 7.5vh 0;
 }
 .promoCard {
     display: flex;
@@ -142,36 +139,36 @@ order: 4;
 }
 
 .promo__content {
-    padding-bottom: 5%;    
+    padding: 5% 0 5% 0;    
 }
 
 // Nature section
 .nature {
     background-color: $primary;
-    min-height: 120vh;
+    padding-bottom: 5%;
 }
 
-.naturePhoto img {
-    min-height: 60vh;
-    object-fit: cover;
+.naturePhoto img{
+    min-width: 100vw;
 }
 
 .natureContent {
-    padding: 5% 0;
-    max-height: 60vh;
+    padding-top: 5%;
+    // max-height: 60vh;
 }
 
 .nature__imageCard {
-    width: 26vw;
+    width: 40%;
     float: left;
 }
 
 .nature__imageCard img {
+    width: calc(100% - 20px);
     box-shadow: -20px 20px $accent;
 }
 
 .nature__text {
-    width: 55vw;
+    width: 60%;
     float: left;
     padding-left: 5%;
 }
@@ -181,7 +178,7 @@ order: 4;
 }
 
 .nature_content {
-    padding-bottom: 3%;
+    padding: 5% 0 5% 0;
 }
 
 // Gallery section
@@ -200,8 +197,98 @@ order: 4;
     width: calc(33% - 10px);
 }
 
-footer {
-    background-color: $black;
-    text-align: center;
-    padding: 1% 0;
+
+// Media queries for responsive design
+
+// design started to break > 1080px on the main page, and >980 on blog and contact pages, so I chose to simplify the code by using just one break at 1080px
+
+// since no mobile, tablet, etc.. designs were given, I chose to stick as closely as possible to the desktop design, but combined into one single column
+
+@media (max-width: 1080px) {
+    // ABOUT
+    .about {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .aboutCard {
+        width: 100%;
+    }
+
+    // BLOG
+    .blog {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .blogCard {
+        width: 85%;
+    }
+
+    // move green mush back in order
+    .blogCard:nth-child(3) {
+        order: 0;
+    }
+
+    .blogCard__image--green {
+        transform: none;
+    }
+
+    // Blog Section text
+    .blogCard__text--burger, .blogCard__text--green {
+        padding:0 0 5% 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center; 
+    }
+
+    .blogCard__text--green {
+        padding-top: 7.5%;
+    }
+
+    // Promo section
+
+    .promoCard {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+        text-align: center;
+    }
+
+    .promo__content {
+        padding: 5% 0 5% 0;    
+    }
+
+    // Nature section
+    .natureContent {
+        padding-top: 5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .nature__imageCard {
+        // the resolution of this photo is low, so I didn't make it 100% because it looked awful
+        width: 60%;
+        float: none;
+        padding-bottom: 7.5%;
+    }
+
+    .nature__text {
+        width: 100%;
+        float: none;
+        padding-left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .nature__title {
+        text-align: center;
+    }
+
+    // I think the gallery section looks fine on smaller screens, so I left it
 }
