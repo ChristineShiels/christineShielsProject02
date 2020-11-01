@@ -21,7 +21,7 @@ header.main{
         background-image: url(./Assets/homeHeader.jpg);
 }
 
-header.blogPage {
+header.blogHeader {
     background-image: url(./Assets/blogHeader.jpg);
 }
 
@@ -56,7 +56,7 @@ header.contactPage {
     flex-grow: 0;
 }
 
-.blogPage .title, .contactPage .title{
+.blogHeader .title, .contactPage .title{
     margin-top: 5%;
 }
 

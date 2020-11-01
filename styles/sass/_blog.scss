@@ -1,12 +1,15 @@
 // BLOG CONTENT
+// grid setup
 .blogPage {
     background-color: $primary;
     display: grid;
     grid-template-columns: 30vw 60vw;
-    grid-template-rows: 35vw 100% 1fr;
+    grid-template-rows: 35vw 1fr 1.11fr;
     column-gap: calc(10vw - 17px);
+    row-gap: 1%;
 }
 
+// sidebar
 .sidebar {
     padding: 25% 0;
     grid-column: 1 / 2;
@@ -40,29 +43,28 @@
     padding-bottom: 5%;
 }
 
+// main column
 .mainBlog{
     grid-column: 2 / 3;
     grid-row: 1 / 2;
-    position: relative;
 }
 
+// float the image up 
 .mainBlog .image--floater {
     width: calc(60vw - 20px);
-    position: absolute;
-    right: 0;
-    top: -5vw;
+    transform: translate(20px, -7.5vh);
     box-shadow: -20px 20px $accent;
 }
 
 .mainBlog__content {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
-    width: calc(60vw - 10px);
-    padding: 15% 15% 10% 15%;
+    width: calc(60vw + 10px);
+    padding: 15% 15% 5% 15%;
     border-left: 5px solid $accent;
     border-bottom: 5px solid $accent;
     // remove pesky space from "row line"
-    transform: translateY(-2px);
+    transform: translateY(-7.5vh);
 }
 
 .mainBlog__title {
@@ -80,6 +82,7 @@
     padding-bottom: 5%;
 }
 
+// comments section
 .comments {
     grid-column: 2 / 3;
     grid-row: 3 / 4;
@@ -96,13 +99,17 @@
     width: 75%;
     margin-bottom: 5%;
 }
-.commentsContent h6 {
+
+.commentsContent h6, .comments__title {
     margin-bottom: 5%;
 }
 
+
+// comments form
 .commentForm {
     text-align: center;
     display: flex;
+    padding-bottom: 5%;
 }
 
 .commentForm input, .commentForm textarea {
@@ -114,18 +121,95 @@
 
 .commentForm input {
     border-bottom: 2px solid $accent;
-    width: 42%;
-
+    width: 44%;
 }
 
 .commentForm textarea {
     resize: none;
-    width: 88%;
+    width: 92%;
     border: 2px solid $accent;
     height: 20vw;
 }
 
 .commentForm button {
-    width: 88%;
-    margin: 2% 2% 2% 6%;
+    width: 92%;
+    margin: 2% 2% 2% 4%;
+}  
+
+// design started to break > 1080px on the main page, and >980 on blog and contact pages, so I chose to simplify the code by using just one break at 1080px
+
+// since no mobile, tablet, etc.. designs were given, I chose to stick as closely as possible to the desktop design, but combined into one single column
+
+@media (max-width: 1080px) {
+    // deconstruct grid 
+    .blogPage {
+        display: inherit;   
+    }
+
+    .sidebar {
+        padding: 0;
+        max-width: 1900px;
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    .sidebar {
+        transform: translateY(-15vh);
+    }
+
+    // main column
+    .mainColumn {
+        max-width: 1900px;
+        width: calc(85% - 20px);
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transform: translateX(20px);
+    }
+
+    .mainBlog__img {
+        width: 100%;
+    }
+
+    .mainBlog .image--floater {
+        width: calc(100% - 20px);
+        transform: none;
+        box-shadow: -20px 0 $accent;
+    }
+
+    .mainBlog__content {
+        width: calc(100% - 80px);
+        padding: 10% 10% 5% 10%;
+        border-left: 5px solid $accent;
+        border-bottom: 5px solid $accent;
+        border-right: 5px solid $accent;
+        border-top: 20px solid $accent;
+        transform: translateX(-60px);
+    }
+
+    // comments section
+    .comments {
+        max-width: 1900px;
+        width: calc(85% - 20px);
+        margin: 0 auto;
+        padding: 0;
+        padding-top: 5%;
+    }
+
+    .commentsContent {
+    float: none;
+    width: 100%;
+    }
+   
+    .commentContent img{
+    margin-right: 2%;
+    }
 }
+
+
+
+
+
+
+    
