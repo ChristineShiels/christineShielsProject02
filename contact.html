@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Restaurant Mall Contact</title>
+    <!-- all the links -->
     <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Josefin+Sans:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
@@ -13,9 +14,17 @@
 </head>
 
 <body>
+    <!-- header -->
     <header class="contactPage">
+        <!-- spanx -->
         <div class="wrapper">
+            <!-- NAVIGATION -->
             <nav class="nav--top">
+                <!-- hamburger menu components -->
+                <input type="checkbox" id="hamburger">
+                <label for="hamburger" class="srOnly"></label>
+                <i class="fas fa-ellipsis-v"></i>
+                <!-- list of nav links -->
                 <ul class="nav--top__ul">
                     <li class="nav--top__li">
                         <a href="./index.html">Home</a>
@@ -30,29 +39,36 @@
                         <a href="./contact.html">Contact</a>
                     </li>
                 </ul>
+                <!-- fixed nav to top for small screens, this page doesn't really need it, but consistency is Queen -->
+                <a href="#top"><i class="fas fa-arrow-alt-circle-up"></i></a>
             </nav>
+            <!-- page title -->
             <div class="title">
                 <h1 class="title__text">Get In Touch</h1>
             </div>
         </div>
     </header>
+    <!-- main section -->
     <main class="contact">
+        <!-- sidebar first -->
         <section class="contactSidebar">
+            <!-- social icons which would link to social accounts -->
             <div class="socialIcons">
                 <ul class="socials">
                     <li>
-                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
                     </li>
                     <li>
-                        <a href=""><i class="fab fa-instagram"></i></a></li>
+                        <a href="#"><i class="fab fa-instagram"></i></a></li>
                     <li>
-                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
                     </li>
                     <li>
-                        <a href=""><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
                     </li>  
                 </ul>
             </div>
+            <!-- actual contact info -->
             <div class="contactSidebar__info">
                 <a href="mailto:info@email.com"class="contactSidebar__email">info@email.com</a>
                 <p class="contactSidebar__address">123-456-7890</p>
@@ -61,6 +77,7 @@
                 <p class="contactSidebar__address">M5V2D5</p>
             </div>
         </section>
+        <!-- contact form -->
         <section class="form">
             <div class="contactForm ">
                 <form action="">
@@ -76,6 +93,7 @@
             </div>
         </section>
     </main>
+    <!-- they say you can judge the DRYness of the code by the size of its footer... -->
     <footer>
         <p>Copyright &#169; 2020 <a href="https://www.JunoCollege.com">Juno College</a></p>
     </footer>

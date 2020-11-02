@@ -1,13 +1,6 @@
 // HEADER
 
-.main .image--floater {
-    width: 50%;
-    position: absolute;
-    right: 0;
-    top: 30%;
-    max-height: 600px;
-}
-
+// background and general formatiing
 header {
     min-height: 60vh;
     background-repeat: no-repeat;
@@ -18,7 +11,7 @@ header {
 }
 
 header.main{
-        background-image: url(./Assets/homeHeader.jpg);
+    background-image: url(./Assets/homeHeader.jpg);
 }
 
 header.blogHeader {
@@ -29,6 +22,14 @@ header.contactPage {
     background-image: url(./Assets/contactHeader.jpg);
 }
 
+// NAVIGATION
+
+// hamburger icon and checkbox disappearing trick
+.fa-ellipsis-v, input[type=checkbox] {
+    display: none;
+}
+
+// nav menu
 .nav--top__ul {
     display: flex;
     flex-direction: row;
@@ -50,6 +51,7 @@ header.contactPage {
     border-bottom: 2px solid $accent;
 }
 
+// titles
 .main .title {
     max-width: 30vw;
     display: flex;
@@ -60,3 +62,113 @@ header.contactPage {
     margin-top: 5%;
 }
 
+// main page floating image
+.main .image--floater {
+    width: 50%;
+    position: absolute;
+    right: 0;
+    top: 30%;
+    max-height: 600px;
+}
+
+// another disappearing trick for later
+.fa-arrow-alt-circle-up {
+    display: none;
+}
+
+// Media queries for responsive design
+
+// design started to break > 1080px on the main page, and >980 on blog and contact pages, so I chose to simplify the code by using just one break at 1080px
+
+// since no mobile, tablet, etc.. designs were given, I chose to stick as closely as possible to the desktop design, but combined into one single column
+@media (max-width: 1080px) {
+    // i don't like this picture, so i chucked it
+    .main .image--floater {
+        display: none;
+    }
+    // main page title wouldnt'fit at the smallest screen sizes, so I reduced it slightly
+    .main .title__text {
+        font-size: 5rem;
+    }
+
+    .main .title, .blogHeader .title, .contactPage .title{
+        margin-top: 0;
+        padding-top: 10%;
+        // at smaller screen sizes, the titles more often hover over light areas in the background image, making them very hard to read, enter the shadow
+        text-shadow: 2px 2px 2px $secondary;
+    }
+
+    // resized to fit resized text
+    h1 span {
+    height: 5rem;
+    text-shadow: none;
+    }
+
+    // Hamburger menu
+    // went with ellipses to change it up a bit
+    .fa-ellipsis-v, input[type=checkbox] {
+        display: block;
+        position: absolute;
+    }
+
+    .fa-ellipsis-v {
+        font-size: 5rem;
+        color: $white;
+        // for readability
+        text-shadow: 2px 2px 2px $secondary;
+        // positioning
+        right: 5%;
+        top: 5%;
+    }
+
+    input[type=checkbox] {
+        // incerase clickable area
+        width: 70px;
+        height: 70px;
+        // keep on top for clickability
+        z-index: 10;
+        // center on ellipses
+        right: 2.2%;
+        top: 3%;
+        // dissappear!
+        opacity: 0;
+    }
+    
+    .nav--top__ul {
+        // move it to the side 
+        position: absolute;
+        flex-direction: column;
+        align-items: flex-end;
+        right: 10%;
+        // hide & seek
+        top: -300px;
+        padding-top: 0;
+        // slide in to those DMs
+        transition: all .5s;
+    }
+
+    // snuggle up with the eliipses
+    .nav--top__li {
+        padding-right: 0;
+    }
+
+    // increase clickable area
+    .nav--top__li a {
+        padding: 17px;
+    }
+
+    // SURPRISE!!! I'm back!!
+    input[type=checkbox]:checked ~ .nav--top__ul {
+        top: 2%;
+    }
+
+    // added navigation to return to top of page because pages get very long
+    .fa-arrow-alt-circle-up {
+        display: block;
+        font-size: 4rem;
+        color: $accent;
+        position: fixed;
+        bottom: 1%;
+        right: 1%;
+    }
+}

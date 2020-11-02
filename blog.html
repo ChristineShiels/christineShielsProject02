@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Restaurant Mall Blog</title>
+    <!-- I asume I need these on every .html? -->
     <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Josefin+Sans:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
@@ -13,9 +14,17 @@
 </head>
 
 <body>
-    <header class="blogHeader">
+    <!-- header -->
+    <header class="blogHeader" id="top">
+        <!-- spanx -->
         <div class="wrapper">
+            <!-- NAVIGATION -->
             <nav class="nav--top">
+                <!-- hamburger menu components -->
+                <input type="checkbox" id="hamburger">
+                <label for="hamburger" class="srOnly"></label>
+                <i class="fas fa-ellipsis-v"></i>
+                <!-- list of nav links -->
                 <ul class="nav--top__ul">
                     <li class="nav--top__li">
                         <a href="./index.html">Home</a>
@@ -30,19 +39,25 @@
                         <a href="./contact.html">Contact</a>
                     </li>
                 </ul>
+                <!-- navigation to top of page on smaller screens -->
+                <a href="#top"><i class="fas fa-arrow-alt-circle-up"></i></a>
             </nav>
             <div class="title">
+                <!-- page title -->
                 <h1 class="title__text">Blog</h1>
             </div>
         </div>
     </header>
+    <!-- blog stuff -->
     <main class="blogPage">
+        <!-- sidebar first -->
         <section class="sidebar">
             <img src="./styles/Assets/blogSideImage.jpg" alt="Salmon filet with pico de gallo">
             <div class="sidebar__content">
                 <h6 class="sidebar__title">Featured Restaurants</h6>
                 <p class="sidebar__text">Sparkling reds include Lambrusco, from Italy, and Brachetto D'Acqui. Serve dry Semillon with clams, mussels, or pasta salad.</p>
                 <h6 class="sidebar__title">Recent Posts</h6>
+                <!-- list of blog posts - I assumed the titles would link to the posts, hence the anchor tags -->
                 <ul>
                     <li><a href="#" class="blog__sideNav">On The Road coffee what to order off of the menu.</a></li>
                     <li><a href="#" class="blog__sideNav">Lorem fistrum quietooor amatomaa la caidita mamaar ese hombree.</a></li>
@@ -52,13 +67,16 @@
                 </ul>
             </div>
         </section>
+        <!-- blog meat -->
         <section class="mainColumn">
             <div class="mainBlog" id="blog">
+                <!-- floaty McFloatface -->
                 <div class="mainBlog__img">
                     <img src="./styles/Assets/blogPostImage.jpg" alt="Workers preparing tables at a restaurant"
                         class="image--floater">
                 </div>
             </div>
+            <!-- get a job! -->
             <div class="mainBlog__content">
                 <h4 class="mainBlog__title">Employment Opportunities</h4>
                 <p class="mainBlog__subtitle">Monday, November 2, 2020 by Michelle</p>
@@ -73,7 +91,9 @@
                 live tomorrow anyway? Let's prioritize the low-hanging fruit what are the expectations both the angel on my left shoulder and the devil on my right are eager to go to the next board meeting and say we’re ditching the business model for not enough bandwidth prairie dogging, nor translating our vision of having a market leading platfrom Q1.</p>
             </div>
         </section>
+        <!-- comments section -->
         <section class="comments" id="comments">
+            <!-- did some floating over here -->
             <div class="commentContent clearfix">
                 <h3 class="comments__title">Comments:</h3>
                 <img src="./styles/Assets/comment01.jpg" alt="Profile picture of commenter">
@@ -91,6 +111,7 @@
                     lumbersexual palo santo. Iceland artisan synth retro flannel next level. Meggings austin flannel man braid, master cleanse vinyl palo santo portland pour-over.</p>
                 </div>
             </div>
+            <!-- comment form -->
             <div class="commentForm">
                 <form action="">
                     <label for="userName" class="srOnly">Please type your name</label>
@@ -104,6 +125,7 @@
             </div>
         </section>
     </main>
+    <!-- putting my best footer forward  -->
     <footer>
         <p>Copyright &#169; 2020 <a href="https://www.JunoCollege.com">Juno College</a></p>
     </footer>

@@ -4,7 +4,7 @@
     background-color: $primary;
     display: grid;
     grid-template-columns: 30vw 60vw;
-    grid-template-rows: 35vw 1fr 1.11fr;
+    grid-template-rows: 35vw 1fr 1.06fr;
     column-gap: calc(10vw - 17px);
     row-gap: 1%;
 }
@@ -15,6 +15,7 @@
     grid-column: 1 / 2;
 }
 
+// width accomodates shadow
 .sidebar img {
     width: calc(100% - 20px);
     box-shadow: 20px 0 $secondary;
@@ -60,10 +61,10 @@
     grid-column: 2 / 3;
     grid-row: 2 / 3;
     width: calc(60vw + 10px);
-    padding: 15% 15% 5% 15%;
+    padding: 15% 10% 5% 15%;
     border-left: 5px solid $accent;
     border-bottom: 5px solid $accent;
-    // remove pesky space from "row line"
+    // remove pesky space from "row line" due to helium floaty picture
     transform: translateY(-7.5vh);
 }
 
@@ -89,6 +90,7 @@
     padding: 5%;
 }
 
+// here comes some legit floating
 .commentContent img{
     float: left;
     margin-right: 5%;
@@ -146,6 +148,7 @@
         display: inherit;   
     }
 
+    // lots of width and position adjustments for maximum beauty
     .sidebar {
         padding: 0;
         max-width: 1900px;
@@ -178,6 +181,7 @@
         box-shadow: -20px 0 $accent;
     }
 
+    // made the border go all the way around since I moved the section to the middle
     .mainBlog__content {
         width: calc(100% - 80px);
         padding: 10% 10% 5% 10%;

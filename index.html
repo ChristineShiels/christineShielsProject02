@@ -5,17 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Restaurant Mall</title>
+    <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <!-- font awesoem icons -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
     integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <!-- css stylesheet -->
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 
 <body>
+    <!-- Header  -->
     <header class="main" >
+        <!-- spanx -->
         <div class="wrapper">
+            <!-- navigation -->
             <nav class="nav--top">
-                <ul class="nav--top__ul">
+                <!-- hamburger menu components -->
+                <input type="checkbox" id="hamburger">
+                <label for="hamburger" class="srOnly"></label>
+                <i class="fas fa-ellipsis-v"></i>
+                <!-- list of nav links -->
+                <ul class="nav--top__ul" id="hamburgerMenu">
                     <li class="nav--top__li">
                         <a href="./index.html">Home</a>
                     </li>
@@ -29,17 +40,23 @@
                         <a href="./contact.html">Contact</a>
                     </li>
                 </ul>
+                <!-- navigation to top of page on smaller screens -->
+                <a href="#top"><i class="fas fa-arrow-alt-circle-up"></i></a>
             </nav>
+            <!-- page title -->
             <div class="title">
                 <h1 class="title__text">The <span class="title__text--highlight">Restaurant</span> Mall</h1>
             </div>
         </div>
+        <!-- weird floating image that I hate -->
         <img class="image--floater" src="./styles/Assets/homeBoxHeader.png" alt="Onion Ring Salad">
     </header>
     <main>
+        <!-- about section -->
         <section class="about" id="about">
-            
+            <!-- spanx -->
             <div class="wrapper">
+                <!-- made the icons anchor tags because it made sense to me to do that? -->
                 <div class="aboutCard">
                     <h2 class="aboutCard__title"><a href="./contact.html"><i class="fas fa-map-marker-alt"></i></a>Location</h2>
                     <p class="aboutCard__text">Network of wormholes Vangelis bits of moving fluff at the edge of forever great turbulent clouds a still more glorious dawn awaits.</p>
@@ -58,11 +75,13 @@
                     will only get better.
                     </p>
                 </div>
-            </div>
-                
+            </div>      
         </section>
+        <!-- blog? preview section???? -->
+        <!-- got a little nuts with the class names here, thried to keep it BEM, but this is my first try, so feedback is appreciated -->
         <section class="blog" id="blog">
             <div class="blogCard">
+                <!-- floaty-uppy photo -->
                 <img class="blogCard__image--burger" src="./styles/Assets/leftImage.jpg" alt="Tall bacon burger on grilled brioche bun with fries">
             </div>
             <div class="blogCard blogCard__text--burger">
@@ -70,6 +89,7 @@
                 <p class="blogCard__content--burger">Spicy jalapeno commodo est in, ut beef ribs burgdoggen sausage ham. Aliqua dolore leberkas, consequat mollit t-bone laboris nulla pork chop aliquip beef ribs rump ground round pancetta.</p>
                 <button class="button--light">Read More</button>
             </div>
+            <!-- floaty-downy photo -->
             <div class="blogCard blogCard02">
                 <img src="./styles/Assets/rightImage.jpg" alt="Mashed potato bowl with green sauce, pine nuts, roasted garlic, tomatoes and flowers" class="blogCard__image--green">
             </div>
@@ -79,6 +99,7 @@
                 <button class="button--light">Read More</button>
             </div>
         </section>
+        <!-- WIN $100 -->
         <section class="promo" id="promo">
             <div class="wrapper promoCard">
                 <h4 class="promo__title">Win a $100 Gift Card</h4>
@@ -87,6 +108,7 @@
                 <button class="button--dark" >Find Out More</button>
             </div>
         </section>
+        <!-- random section about nature? -->
         <section class="nature">
             <div class="naturePhoto">
                 <img src="./styles/Assets/banner.jpg" alt="Interior shot of a trendy cafe with customers and employees">
@@ -106,6 +128,7 @@
                 </div>
             </div>
         </section>
+        <!-- smol gallery of random images -->
         <section class="gallery" id="gallery">
             <div class="wrapper">
                 <div class="gallery__imgCard">
@@ -120,11 +143,10 @@
             </div>
         </section>
     </main>
+    <!-- one foot two foot red foot blue foot -->
     <footer>
         <p>Copyright &#169; 2020 <a href="https://www.JunoCollege.com">Juno College</a></p>
     </footer>
-
-
 </body>
 
 </html>

@@ -149,7 +149,7 @@ order: 4;
 }
 
 .naturePhoto img{
-    min-width: 100vw;
+    min-width: 98vw;
 }
 
 .natureContent {
@@ -209,6 +209,7 @@ order: 4;
     .about {
         flex-direction: column;
         align-items: center;
+        padding-top: 10%;
     }
 
     .aboutCard {
